@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С 8 марта!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe6f2;
+            font-family: Arial, sans-serif;
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: beat 1s infinite;
+        }
+        .heart::before,
+        .heart::after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: 50px;
+        }
+        @keyframes beat {
+            0%, 100% {
+                transform: rotate(-45deg) scale(1);
+            }
+            50% {
+                transform: rotate(-45deg) scale(1.2);
+            }
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff0066;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="heart"></div>
+        <div class="message">я люблю тебя моя любимая софочка!!! 💐</div>
+    </div>
+</body>
+</html>
